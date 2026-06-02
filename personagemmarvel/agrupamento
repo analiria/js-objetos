@@ -1,0 +1,11 @@
+function gerarEtiquetasEntrega(personagens) {
+  personagens.forEach(p => {
+    const endereco = p.endereco;
+    
+    // Verifica se os campos opcionais existem e os formata
+    const compl = endereco.complemento ? ` [${endereco.complemento}]` : '';
+    const cep = endereco.cep ? ` - ${endereco.cep}` : '';
+    
+    console.log(`${p.nome} - ${endereco.rua}, ${endereco.numero}${compl}${cep}`);
+  });
+}

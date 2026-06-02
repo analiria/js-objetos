@@ -1,0 +1,27 @@
+function encontrarTelefonesInvalidos(personagens) {
+  const invalidos = [];
+
+  personagens.forEach(p => {
+    // Verifica se o personagem tem pelo menos 2 telefones cadastrados
+    if (!p.telefones || p.telefones.length < 2) {
+      invalidos.push(p.nome);
+      return; // Pula para o próximo personagem
+    }
+
+    const tel1 = p.telefones[0];
+    const tel2 = p.telefones[1];
+
+    const ddd = tel1.substring(0, 2);
+    const restoNumero = tel1.substring(2);
+    
+    // Monta o formato esperado: DDD + "9" + restante do número
+    const telefoneEsperado = `${ddd}9${restoNumero}`;
+
+    // Se o segundo telefone não bater com o esperado, adiciona à lista de inválidos
+    if (tel2 !== telefoneEsperado) {
+      invalidos.push(p.nome);
+    }
+  });
+
+  return invalidos;
+}

@@ -1,0 +1,3 @@
+function filtrarHeroisEmApartamento(personagens) {
+  return personagens.filter(personagem => personagem.apartamento === true);
+}

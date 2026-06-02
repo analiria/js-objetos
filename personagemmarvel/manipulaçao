@@ -1,0 +1,7 @@
+function buscarPersonagem(personagens, termoBusca) {
+  const termoMinusculo = termoBusca.toLowerCase();
+  
+  return personagens.find(personagem => 
+    personagem.nome.toLowerCase().includes(termoMinusculo)
+  );
+}
