@@ -1,6 +1,6 @@
 const precolivros =[
     {
-    titulo:"javascript",
+    titulo:"pequeno principe",
     preco:25
     },
     {
@@ -8,7 +8,7 @@ const precolivros =[
     preco:15
     }
     {,
-    titulo:"java",
+    titulo:"nunca minta",
     preco:30
     }
     {,
